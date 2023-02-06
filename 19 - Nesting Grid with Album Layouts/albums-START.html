@@ -2,10 +2,36 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/style.css">
-  <title>Nesting Grid with Album Layouts!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Nesting Grid with Album Layouts!</title>
+    <style>
+        .albums {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            color: white;
+        }
+        .album {
+            background-color: rgba(245, 245, 245, 0.363);
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 160px 1fr;
+            gap: 10px;
+            padding: 20px;
+            width: 1fr;
+            box-sizing: border-box;
+            align-items: center;
+        }
+        .album__artwork {
+            aspect-ratio: 1 / 1;
+            width: 100%;
+        }
+        .album__details p{
+            font-weight: 100;
+        }
+    </style>
 </head>
 
 <body>
