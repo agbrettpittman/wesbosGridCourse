@@ -11,15 +11,26 @@
 <body>
   <!-- Perfectly Centered Multiple Elements -->
 
-  <div class="hero">
+  <div class="hero grid">
     <h2>Something Big Is Coming</h2>
     <p>Get Ready...</p>
   </div>
 
   <style>
     .hero {
-      height: 200px;
-      background: rgba(255, 255, 255, 0.2);
+        height: 200px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .grid {
+        display: grid;
+        justify-items: center;
+        align-content: center;
     }
   </style>
 </body>

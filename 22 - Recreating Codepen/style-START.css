@@ -32,3 +32,62 @@ h6 {
   margin: 0;
   font-size: 1.5em;
 }
+
+/*================================================================= My Code ==============================================================*/
+
+body {
+    background-color: #111111;
+    color: white;
+}
+
+.codepen {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr 40px;
+}
+
+.button {
+    color: white;
+    background-color: #3c3c3c;
+    padding: 4px 5px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+/* ====== header ===== */
+
+header.pen {
+    align-items: center;
+    padding: 0px 10px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 5px solid #383838;
+}
+
+.pen__details {
+    flex: 1;
+}
+
+header.pen .button {
+    padding: 10px 8px;
+}
+
+/* ====== footer ===== */
+
+footer.settings {
+    display: grid;
+    grid-template-columns: auto auto auto 1fr;
+    align-items: stretch;
+    align-content: center;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+.button {
+    color: white;
+    background-color: #2d2d2d;
+    padding: 4px 5px;
+    border: 0px;
+    border-radius: 5px;
+}
+
