@@ -43,7 +43,7 @@ body {
 .codepen {
     height: 100vh;
     display: grid;
-    grid-template-rows: 100px 1fr 1fr 40px;
+    grid-template-rows: auto 1fr 1fr auto;
 }
 
 .button {
@@ -73,13 +73,19 @@ header.pen .button {
     font-size: 15px;
 }
 
+header.pen button.button.button--dirty {
+    position: relative;
+}
+
 header.pen button.button.button--dirty::before {
     display: block;
+    position: absolute;
     background-color: gold;
     height: 2px;
-    width: 115%;
+    width: calc(100% - 6px);
     content: '';
-    margin: -6px 0px 3px -8%;
+    left: 3px;
+    top: 3px;
 }
 /* ====== code ======= */
 
@@ -134,12 +140,12 @@ footer.settings {
     grid-template-columns: auto auto auto 1fr;
     align-items: stretch;
     align-content: center;
-    gap: 5px;
-    padding-left: 10px;
+    gap: 10px;
+    padding: 10px;
     border-top: 1px solid gray;
 }
 
-.button {
+footer .button {
     color: white;
     background-color: #2d2d2d;
     padding: 4px 5px;
