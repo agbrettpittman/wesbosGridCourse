@@ -13,13 +13,29 @@
 
   <div class="grid">
     <div class="item">1</div>
-    <div class="item">2</div>
+    <div class="item" style="--span: 7;">
+        <div class="grid" style="--cols: 2;">
+            <div class="item">A</div>
+            <div class="item">B</div>
+        </div>
+    </div>
     <div class="item">3</div>
     <div class="item">4</div>
   </div>
 
   <style>
-    .grid {}
+    .grid {
+        --cols: 12;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(var(--cols), minmax(0,1fr));
+    }
+    .item {
+        --span: 1;
+        width: 100%;
+        min-width: 0;
+        grid-column: span var(--span);
+    }
   </style>
 
 </body>
